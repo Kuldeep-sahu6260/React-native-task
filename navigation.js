@@ -1,9 +1,10 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Pressable,Text} from "react-native"
-import Details from './screen/Details';
-import List from './screen/List';
-import Main from './screen/Main';
+
+
+import Post from './screen/Post';
+import Login from './screen/Login';
 
 const Stack = createNativeStackNavigator();//
 
@@ -15,16 +16,16 @@ const Navigation = () => {
       <Stack.Navigator
         screenOptions={{ contentStyle: { backgroundColor: 'white' } }}
       >
-        <Stack.Screen name="List" component={List}
+        <Stack.Screen name="First" component={Post}
         options={({ navigation }) => ({
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Main')}
+              onPress={() => navigation.navigate('Login')}
               style={{ flexDirection: 'row' }}
             >
               
               <Text style={{ }}>
-                Move
+                Form
               </Text>
             </Pressable>
           ),
@@ -32,12 +33,8 @@ const Navigation = () => {
 
          />
        
-        <Stack.Screen
-          name="Details"
-          component={Details}
-          options={{ presentation: 'modal' }}
-        />
-        <Stack.Screen name="Main" component={Main} />
+        
+        <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   );

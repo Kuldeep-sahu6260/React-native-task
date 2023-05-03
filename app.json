@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expo-react",
-    "slug": "expo-react",
+    "name": "React-Native",
+    "slug": "rnblog",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.rnblog.myApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f963a645-b92c-41e4-9f7e-b14e93c99a17"
+      }
     }
   }
 }
